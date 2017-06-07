@@ -13,22 +13,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * This is a simple description.
  *
+ * @param {Object} props (title, className, message)
  * @api public
  */
 
 exports.default = function (props) {
-  var title = props.title || 'Tether';
   return _react2.default.createElement(
     'h1',
     { className: props.className || 'tether-logo' },
     _react2.default.createElement(
       'a',
       { href: '/' },
-      _react2.default.createElement(Logo, { title: title }),
+      props.children || _react2.default.createElement(Logo, null),
       _react2.default.createElement(
         'span',
         { 'data-message': props.message },
-        title
+        props.title || 'Tether'
       )
     )
   );
@@ -37,7 +37,6 @@ exports.default = function (props) {
 /**
  * Tether logo in SVG.
  *
- * @param {Object} props (contains title)
  * @api private
  */
 
@@ -45,16 +44,14 @@ exports.default = function (props) {
  * Dependencies.
  */
 
-function Logo(_ref) {
-  var title = _ref.title;
-
+function Logo() {
   return _react2.default.createElement(
     'svg',
     { width: '36px', height: '36px', viewBox: '0 0 134 134' },
     _react2.default.createElement(
       'title',
       null,
-      title
+      'Tether'
     ),
     _react2.default.createElement(
       'defs',
@@ -65,7 +62,7 @@ function Logo(_ref) {
     ),
     _react2.default.createElement(
       'g',
-      { stroke: 'none', 'stroke-width': '1', fill: 'none', 'fill-rule': 'evenodd' },
+      { stroke: 'none', strokeWidth: '1', fill: 'none', 'fill-rule': 'evenodd' },
       _react2.default.createElement(
         'g',
         { transform: 'translate(-192.000000, -954.000000)' },
