@@ -8,16 +8,16 @@ import React from 'react'
 /**
  * This is a simple description.
  *
+ * @param {Object} props (title, className, message)
  * @api public
  */
 
 export default (props) => {
-  const title = props.title || 'Tether'
   return (
     <h1 className={props.className || 'tether-logo'}>
       <a href="/">
-        <Logo title={title}/>
-        <span data-message={props.message}>{title}</span>
+        {props.children || <Logo />}
+        <span data-message={props.message}>{props.title || 'Tether'}</span>
       </a>
     </h1>
   )
@@ -27,14 +27,13 @@ export default (props) => {
 /**
  * Tether logo in SVG.
  *
- * @param {Object} props (contains title)
  * @api private
  */
 
-function Logo ({title}) {
+function Logo () {
   return (
     <svg width="36px" height="36px" viewBox="0 0 134 134">
-        <title>{title}</title>
+        <title>Tether</title>
         <defs>
             <polygon id="path-1" points="0.393496659 0 21.930245 0 21.930245 21.5366592 0.393496659 21.5366592 0.393496659 0"></polygon>
             <polygon id="path-3" points="0 21.8785746 0 0.341380846 21.5365702 0.341380846 21.5365702 21.8785746 1.14236032e-15 21.8785746"></polygon>
