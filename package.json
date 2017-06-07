@@ -2,11 +2,8 @@
 {
   "name": "tether-logo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "tape test/*.js"
-  },
+  "description": "Tether logo as a React component",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tether/tether-logo.git"
@@ -17,8 +14,16 @@
   ],
   "author": "Petrofeed Inc",
   "license": "MIT",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/tether/tether-logo/issues"
   },
-  "homepage": "https://github.com/tether/tether-logo#readme"
+  "homepage": "https://github.com/tether/tether-logo#readme",
+  "devDependencies": {
+    "react-fatigue-dev": "github:tj/react-fatigue-dev#704f778"
+  }
 }
