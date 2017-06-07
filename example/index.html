@@ -3,6 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Tether Logo</title>
+    <style>
+      .tether-logo {
+      }
+      .tether-logo a {
+        position: relative;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .tether-logo span {
+        position: absolute;
+        line-height: 36px;
+        left: 48px;
+      }
+
+      .tether-logo span:before {
+        position: absolute;
+        bottom: -12px;;
+        font-size: 12px;
+        content: attr(data-message)
+      }
+    </style>
   </head>
   <body>
     <main></main>

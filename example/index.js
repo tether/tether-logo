@@ -11,6 +11,8 @@ import Logo from '..'
  */
 
 ReactDOM.render(
-  <Logo />,
+  <Logo>
+    <span>Welcome</span>
+  </Logo>,
   document.querySelector('main')
 )
