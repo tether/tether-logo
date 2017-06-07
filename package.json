@@ -1,4 +1,3 @@
-
 {
   "name": "tether-logo",
   "version": "1.0.0",
@@ -12,7 +11,7 @@
     "tether",
     "logo"
   ],
-  "author": "Petrofeed Inc",
+  "author": "Olivier Wietrich",
   "license": "MIT",
   "browserify": {
     "transform": [
