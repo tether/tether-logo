@@ -14,12 +14,10 @@ import React from 'react'
 
 export default (props) => {
   return (
-    <h1 className={props.className || 'tether-logo'}>
-      <a href="/">
-        {props.children || <Logo />}
-        <span data-message={props.message}>{props.title || 'Tether'}</span>
-      </a>
-    </h1>
+    <a className={props.className || 'tether-logo'} href="/">
+      {props.children || <Logo />}
+      <span data-message={props.message}>{props.title || 'Tether'}</span>
+    </a>
   )
 }
 
