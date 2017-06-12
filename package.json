@@ -1,6 +1,6 @@
 {
   "name": "tether-logo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tether logo as a React component",
   "main": "build/index.js",
   "repository": {
